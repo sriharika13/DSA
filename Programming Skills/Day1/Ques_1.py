@@ -1,4 +1,4 @@
-#Average Salary Excluding the Minimum and Maximum Salary
+#Leetcode 1491.Average Salary Excluding the Minimum and Maximum Salary
 class Solution:
     def average(self, salary: List[int]) -> float:
         minn=min(salary)
