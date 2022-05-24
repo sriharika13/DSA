@@ -29,14 +29,14 @@ class Solution:
  	    #If the current element is not 0, then we need to
  	    #append it just in front of last non 0 element we found.
  	    for i in range(len(nums)):
- 	    if nums[i]!=0:
- 	    nums[lastNonZeroFoundAt]=nums[i] 
- 	    lastNonZeroFoundAt+=1
+ 	        if nums[i]!=0:
+ 	            nums[lastNonZeroFoundAt]=nums[i] 
+ 	            lastNonZeroFoundAt+=1
  	    #After we have finished processing new elements,
  	    #all the non-zero elements are already at beginning of array.
  	    #We just need to fill remaining array with 0's.
  	    for i in range(lastNonZeroFoundAt, len(nums)):
- 	    nums[i]=0
+ 	        nums[i]=0
 #     time: O(n), space:O(1)
 # worst case: [0,0,0,0,0,0,0,0,1] for loop i goes O(n) and for zeros o(n-1)
             
@@ -52,7 +52,14 @@ class Solution:
             if nums[i]!=0:
                 swap(nums[lastNonZeroFoundAt], nums[i])
                 lastNonZeroFoundAt+=1
-                
-                
-                
+#          time:O(n), space: O(1)
+# The total operations (array writes) that code does is Number of non-0 elements.
+# This gives us a much better best-case (when most of the elements are 0) complexity than last solution.
+# worst case: [1,2,3,4,4,5,6] all non-zeros 
+#                 https://leetcode.com/problems/move-zeroes/solution/
+            
+ 
+ 
+ 
+ 
                 
